@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3gv4R/wA8JRMRpdyTMNqivgsPdiBdSPtlVGMhkAbJCuX3u1uN5OILtaWOoSEoxaGOuTG1Tdhpj333VuiGhuPjQ==",
+  "dgSpecHash": "cnQOhMFHaDbTMvalDijxylfp4Z9UHotzzXyMlDeef2E4ip1Oy+X4oFglE6FZGjCf7ZREa70xitvPcWy4y8QCEw==",
   "success": true,
-  "projectFilePath": "/home/azureusercoffeeuniversity/AzureSampleTest/active-directory-verifiable-credentials-dotnet/1-asp-net-core-api-idtokenhint/AspNetCoreVerifiableCredentials.csproj",
+  "projectFilePath": "/home/azureusercoffeeuniversity/GartnerHotel/verifiedidsample/AspNetCoreVerifiableCredentials.csproj",
   "expectedPackageFiles": [
     "/home/azureusercoffeeuniversity/.nuget/packages/azure.core/1.6.0/azure.core.1.6.0.nupkg.sha512",
     "/home/azureusercoffeeuniversity/.nuget/packages/azure.identity/1.3.0/azure.identity.1.3.0.nupkg.sha512",

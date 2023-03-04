@@ -4,10 +4,11 @@
     ViewData["Title"] = "Issuer";
 }
             <div style="text-align: center;">
-                <img src="https://coffeeuniversity.blob.core.windows.net/coffeeuniversityimages/PwC_Pictograms_HousingHospitalityCities_Orange_RGB.png" height=200px; />
+		<object type = "image/svg+xml" data = "key.svg"> </object>
                 <h1>Gartner Hotel Key Issuance</h1>
-        
-            <button type="button" id="sign-in" class="button">GET KEY</button>
+            
+            @*<button type="button" id="sign-in" class="button">GET KEY</button>*@
+	    <object type = "image/svg+xml" id = "sign-in" data = "loading.svg"> </object>
             <div id="errorMessage"></div>
             <br />
             <div id="qrText"  style="display:none;">
@@ -35,7 +36,7 @@
                 var qrcode = new QRCode("qrcode", { width: 300, height: 300 });
                 var respIssuanceReq = null;
 
-signIn.addEventListener('click', () => {
+document.addEventListener('DOMContentLoaded', () => {
     fetch('/api/issuer/issuance-request')
         .then(response => response.text())
         //.catch(error => { console.log(error.message); document.getElementById("errorMessage").innerHTML += error.message; })
