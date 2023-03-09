@@ -236,7 +236,7 @@ namespace AspNetCoreVerifiableCredentials
                     var cacheData = new
                     {
                         status = "request_retrieved",
-                        message = "QR Code is scanned. Waiting for issuance...",
+                        message = "Fill out the form on your phone to retrieve your credential.",
                     };
                     _cache.Set(state, JsonConvert.SerializeObject(cacheData));
                 }

@@ -4,10 +4,10 @@
     ViewData["Title"] = "Verifier";
 }
            <div style="text-align: center;">
-                <img src="https://coffeeuniversity.blob.core.windows.net/coffeeuniversityimages/PwC_Pictograms_HousingHospitalityCities_Orange_RGB.png" height=200px; />
+                <object type = "image/svg+xml" data = "key.svg"> </object>
                 <h1>Gartner Hotel Key Verification</h1>
         
-            <button type="button" id="sign-in" class="button">VERIFY KEY</button>
+            <object type = "image/svg+xml" id = "sign-in" data = "loading-icon.svg"> </object>
             <div id="qrText"  style="display:none;">
                 <p class="small-text">
                     <img src="authenticator-icon.png" alt="Authenticator icon" class="icon-small"><br>
@@ -35,7 +35,7 @@
                 var qrcode = new QRCode("qrcode", { width: 300, height: 300 });
                 var respPresentationReq = null;
 
-                signIn.addEventListener('click', () => {
+                document.addEventListener('DOMContentLoaded', () => {
                     fetch('/api/verifier/presentation-request')
                     .then(function(response) {
                         response.text()
@@ -52,7 +52,7 @@
                             } else {
                                 console.log(`Not Android or IOS. Generating QR code encoded with ${message}`);
                                 qrcode.makeCode(respPresentationReq.url);
-                                document.getElementById('sign-in').style.visibility = "hidden";
+                                document.getElementById('sign-in').style.display = "none";
                                 document.getElementById('qrText').style.display = "block";
                             }
                         }).catch(error => { console.log(error.message); })
@@ -71,6 +71,7 @@
                                         document.getElementById('message-wrapper').style.display = "block";
                                         document.getElementById('qrText').style.display = "none";
                                         document.getElementById('qrcode').style.display = "none";
+					document.getElementById('sign-in').style.display = "inline";
 
                                         document.getElementById('message').innerHTML = respMsg.message;
                                     }

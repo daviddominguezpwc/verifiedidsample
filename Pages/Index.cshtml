@@ -3,11 +3,21 @@
 @{
     ViewData["Title"] = "Home";
 }
-<object type="image/svg+xml" data="hotel-icon.svg"> </object>
-            <div style="text-align: center;">
-                <h1>Gartner Hotel Key Issuance and Verification</h1>
-        
-                <button type="button" id="idIssue" class="button">GET KEY</button>
+            @*<div style="text-align: center;">*@
+	    @*<div style ="display:flex; flex-direction: row; justify-content: center; align-items: center; gap: 50px">*@
+	    <div style ="display:flex; flex-direction: row; justify-content: center; align-items: stretch">
+		<div style = "width: 50%"> 
+		<object type="image/svg+xml" data="hotel-icon.svg" style="padding-top: 25px; width:fit-content; height:60%"> </object>
+		</div> 
+
+		<div style = "width: 50%; flex-wrap: wrap"> 
+		<h1>Welcome Guest!</h1>
+                <h1>Use the Microsoft Verified ID Service to verify your identity and receive credential as your keycard for your stay at the Gartner Hotel.</h1>
+
+		</div> 
+            </div>
+	    <div> 
+		<button type="button" id="idIssue" class="button">GET KEY</button>
                 <button type="button" id="idVerify" class="button">VERIFY KEY</button>
                 <script>
                         var idIssue = document.getElementById('idIssue');
@@ -20,4 +30,4 @@
                             window.location = "verifier";
                         })
                     </script>
-            </div>
+	    </div> 
