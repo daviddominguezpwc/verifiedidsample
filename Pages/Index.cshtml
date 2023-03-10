@@ -5,18 +5,24 @@
 }
             @*<div style="text-align: center;">*@
 	    @*<div style ="display:flex; flex-direction: row; justify-content: center; align-items: center; gap: 50px">*@
-	    <div style ="display:flex; flex-direction: row; justify-content: center; align-items: stretch">
-		<div style = "width: 50%"> 
-		<object type="image/svg+xml" data="hotel-icon.svg" style="padding-top: 25px; width:fit-content; height:60%"> </object>
+	    <div class = "flex-home">
+		<div class = "picture-div-home"> 
+		<object type="image/svg+xml" data="hotel-icon.svg"> </object>
 		</div> 
 
-		<div style = "width: 50%; flex-wrap: wrap"> 
+		<div class = "text-container"> 
 		<h1>Welcome Guest!</h1>
                 <h1>Use the Microsoft Verified ID Service to verify your identity and receive credential as your keycard for your stay at the Gartner Hotel.</h1>
 
 		</div> 
             </div>
-	    <div> 
+	    <div>
+		<ul>
+			<li id = "step1"> Download the Microsoft Authenticator app onto an iOS device </li>
+			<li id = "step2"> Scan the QR code on the <a href = "issuer" id = "idIssue"> Issue Credential </a> page </li>
+			<li id = "step3"> Scan the QR code on the <a href = "verifier" id = "idVerify"> Verify Credential </a> page </li>
+		</ul> 
+		@* code commented below, as it was used in the initial implementation 
 		<button type="button" id="idIssue" class="button">GET KEY</button>
                 <button type="button" id="idVerify" class="button">VERIFY KEY</button>
                 <script>
@@ -29,5 +35,5 @@
                         idVerify.addEventListener('click', () => {
                             window.location = "verifier";
                         })
-                    </script>
+                    </script>*@
 	    </div> 
