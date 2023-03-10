@@ -9,6 +9,21 @@ body {
     /*background-color: pink;*/
 }
 
+#homeli li+li:before {
+    padding: 8px;
+    list-style-image: url('chevron-icon.svg');
+
+}
+
+#homeli {
+    display: inline;
+}
+
+.breadcrumb {
+    padding: 10px; 30px;
+    list-style: none;
+}
+
 .flex-home {
     display: flex;
     flex-direction:row;

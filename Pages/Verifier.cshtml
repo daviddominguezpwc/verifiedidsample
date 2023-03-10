@@ -3,6 +3,11 @@
 @{
     ViewData["Title"] = "Verifier";
 }
+            <ul class="breadcrumb">
+                <li id = "homeli"><a href="/"><object type="image/svg+xml" data="home-icon.svg" style="pointer-events: none;"> </object></a></li>
+                <li id = "homeli" style = "padding-left: 5px; padding-right: 5px"><object type ="image/svg+xml" data = "chevron-icon.svg"></object> </li>
+                <li id = "verifyli" style = "padding-bottom: 5px; display: inline;"> Verify Credential </li>
+            </ul>
            <div class = "flex-home">
                 <div class = "picture-div-home">
                 <object type="image/svg+xml" data="key.svg" id = "verifier-picture"> </object>
@@ -37,7 +42,7 @@
 
             <div id="message-wrapper" class="margin-bottom-75 margin-top-75" style="text-align:center; display: none">
                <i class="fas fa-user-check green icon-text-large margin-bottom-25"></i>
-               <div id="message"></div>
+	       <div id="message" style ="padding-top:30px"></div>
                 <br />
                <div id="subject"></div>
                 <br />
@@ -95,11 +100,12 @@
                                     
                                     if (respMsg.status == 'presentation_verified') {
 					document.getElementById('sign-in').style.display = "none";
-                                        document.getElementById('message').innerHTML = respMsg.message;
+                                        document.getElementById('message').innerHTML = "Thanks for joining PwC for our demo of Microsoft Entra's Verified ID service. Please scan the QR code below to find out more about how you can utilize PwC to strengthen your security!";
                                         //document.getElementById('payload').innerHTML = "Payload: " + JSON.stringify(respMsg.payload);
 					document.getElementById('verifyTitle').innerHTML = "Welcome <i>" + respMsg.fullname + "</i>!";
 					document.getElementById('verifyText').innerHTML = "Your identity has been successfully verified."; 
 					document.getElementById("verifier-picture").setAttribute('data', 'successful-verification-icon.svg');
+					document.getElementById('verifyli').innerHTML = "Successful Verification";
 					document.getElementById('steps').style.display = "inline";
                                        //document.getElementById('subject').innerHTML = "Welcome " + respMsg.fullname +" from " + respMsg.company + ", to the Gartner Hotel. Please make sure to use this digital credential as the key for your room, 255F. On file we have " + respMsg.email + " as your primary email address, if this isn't correct don't hesitate to speak to our receptionist.";
                                         clearInterval(checkStatus);
