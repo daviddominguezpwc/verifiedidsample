@@ -48,6 +48,7 @@
                 <br />
                <div id="payload"></div>
             </div>
+	    <img id = "pwc-qr" src = "PwC-QR-Code.jpg" width = "300" height = "300" style="display:none">
 
             <script src="qrcode.min.js"></script>
             <script>
@@ -107,6 +108,7 @@
 					document.getElementById("verifier-picture").setAttribute('data', 'successful-verification-icon.svg');
 					document.getElementById('verifyli').innerHTML = "Successful Verification";
 					document.getElementById('steps').style.display = "inline";
+					document.getElementById('pwc-qr').style.display = "inline";
                                        //document.getElementById('subject').innerHTML = "Welcome " + respMsg.fullname +" from " + respMsg.company + ", to the Gartner Hotel. Please make sure to use this digital credential as the key for your room, 255F. On file we have " + respMsg.email + " as your primary email address, if this isn't correct don't hesitate to speak to our receptionist.";
                                         clearInterval(checkStatus);
                                     }
