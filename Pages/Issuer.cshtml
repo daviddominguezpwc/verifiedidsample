@@ -15,7 +15,7 @@
 
                 <div class = "text-container">
                 <h1>Issue Credential</h1>
-                <h1>Scan the QR code below with your Microsoft Authenticator app to retrieve your credential.</h1>
+                <h1 id = "subtext"> In a rush? Check in before you arrive by issuing yourself a credential keycard.  Scan QR Code below with your Microsoft Authenticator app to retrieve your credential!</h1>
 
                 </div>
             </div>
@@ -89,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     document.getElementById('qrText').style.display = "none";
                                     document.getElementById('qrcode').style.display = "none";
 				    document.getElementById('sign-in').style.display = "inline";
+				    document.getElementById('subtext').innerHTML = "Issuance in Progress...";
 
                                     if (respMsg.pin) {
                                         document.getElementById('pinCodeText').style.display = "visible";

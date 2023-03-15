@@ -15,7 +15,7 @@
 
                 <div class = "text-container">
                 <h1 id = "verifyTitle">Verify Credential</h1>
-                <h1 id = "verifyText">Scan the QR code below with your Microsoft Authenticator app to verify your credential.</h1>
+                <h1 id = "verifyText">To validate your reservation and verify your credential, please scan the QR code below with your Microsoft Authenticator App.</h1>
 
                 </div>
             </div>
@@ -95,7 +95,7 @@
                                         document.getElementById('qrText').style.display = "none";
                                         document.getElementById('qrcode').style.display = "none";
 					document.getElementById('sign-in').style.display = "inline";
-
+					document.getElementById('verifyText').innerHTML = "Verification in progress...";
                                         document.getElementById('message').innerHTML = respMsg.message;
                                     }
                                     
